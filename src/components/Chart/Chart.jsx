@@ -59,14 +59,14 @@ const Chart = ({ data: { confirmed, deaths, recovered }, country }) => {
             data: dailyData.map(({ deaths }) => deaths),
             label: "Deaths",
             borderColor: "red",
-            backgroundColor: "rgba(255,0,0,0.5)",
+            backgroundColor: "rgba(255,255,255,0.5)",
             fill: true,
           },
         ],
       }}
     />
   ) : null;
-  console.log(confirmed, recovered, deaths);
+  // console.log(confirmed, recovered, deaths);
 
   return (
     <div className={styles.container}>

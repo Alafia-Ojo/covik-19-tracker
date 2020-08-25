@@ -5,10 +5,10 @@ import styles from "./Cards.module.css";
 import { Card, CardContent, Typography, Grid } from "@material-ui/core";
 import CountUp from "react-countup";
 
-const Cards = ({
-  passedData: { confirmed, deaths, lastUpdate, recovered },
-}) => {
+//Destructure the passedData gotten as props from the Cards component in App.js
+const Cards = ({ data: { confirmed, deaths, lastUpdate, recovered } }) => {
   console.log("Confirmed", confirmed);
+  //If any of the data is unavailable or still awaiting fulfillment, return 'Loading..'. Great practice
   if (!confirmed) {
     return "Loading";
   }

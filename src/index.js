@@ -1,3 +1,5 @@
+//Entry to our react App. We are remdering the App component, which holds the other components
+
 import React from "react";
 import ReactDOM from "react-dom";
 
