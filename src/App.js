@@ -24,8 +24,8 @@ class App extends Component {
     return (
       <div className={styles.container}>
         <Cards passedData={this.state.data} />
-        <Chart />
         <CountryPicker />
+        <Chart />
       </div>
     );
   }

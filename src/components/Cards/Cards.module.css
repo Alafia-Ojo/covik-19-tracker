@@ -1,4 +1,4 @@
-.contiainer {
+.container {
   margin: 50px 0;
 }
 .card {
@@ -11,6 +11,6 @@
 .recovered {
   border-bottom: 15px solid rgba(0, 255, 0, 0.5);
 }
-.infected {
+.deaths {
   border-bottom: 15px solid rgba(255, 0, 0, 0.5);
 }
