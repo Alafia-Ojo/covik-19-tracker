@@ -12,6 +12,17 @@ class App extends Component {
     //Only properties of classes can be passed down
     //this will hold the data from the componentDidMount();
     data: {},
+    country: "",
+  };
+
+  handleCountryChange = async (country) => {
+    const fetchedData = await fetchData(country);
+    //fetch data
+    console.log(fetchedData);
+
+    //set state
+    this.setState({ data: fetchedData, country: country });
+    //console.log("Data", this.state.data);
   };
 
   async componentDidMount() {
@@ -20,12 +31,12 @@ class App extends Component {
     //console.log("This's state", this.state.data);
   }
   render() {
-    //const { data } = this.state;
+    const { data, country } = this.state;
     return (
       <div className={styles.container}>
-        <Cards passedData={this.state.data} />
-        <CountryPicker />
-        <Chart />
+        <Cards passedData={data} />
+        <CountryPicker handleCountryChange={this.handleCountryChange} />
+        <Chart data={data} country={country} />
       </div>
     );
   }
